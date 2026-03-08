@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:localhost)",
+      "Bash(curl -s http://localhost:8000/loblaws.json)",
+      "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); print\\(type\\(data\\)\\); print\\(list\\(data.keys\\(\\)\\) if isinstance\\(data, dict\\) else f''Array of {len\\(data\\)} items''\\); item = data[0] if isinstance\\(data, list\\) else list\\(data.values\\(\\)\\)[0]; print\\(json.dumps\\(item, indent=2\\)[:2000]\\)\")",
+      "Bash(curl -v http://localhost:8000/loblaws.json)",
+      "Bash(curl -s http://localhost:8000/)",
+      "Bash(curl -s http://localhost:8000/app/)",
+      "Bash(curl -s http://localhost:8000/app/grocery/)",
+      "Bash(python3 -c \":*)",
+      "Bash(flutter pub get)",
+      "Bash(/home/kali/flutter/bin/flutter pub get)"
+    ]
+  }
+}
